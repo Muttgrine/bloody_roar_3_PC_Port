@@ -1,0 +1,23 @@
+===============================================
+  DISC REQUIREMENTS
+===============================================
+
+For multiplayer, all players must use the same disc image.
+
+Game:    Bloody Roar 3
+Region:  USA (NTSC-U)
+Serial:  SLUS-20212
+CRC:     AA4E5A35
+
+SHA-256: c2c505f1f639cc5774da7d17eea90571fe066ee538706c238cb76b04d13235a7
+
+Format:  ISO (2048 bytes/sector)
+         If you have a BIN/CUE, the launcher converts it automatically.
+
+Place your disc image as:
+  games\br3\disc.iso
+
+To verify your image matches, open PowerShell and run:
+  Get-FileHash games\br3\disc.iso -Algorithm SHA256
+
+The hash must match the SHA-256 above for online play.
