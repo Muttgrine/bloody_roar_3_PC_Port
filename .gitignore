@@ -19,3 +19,4 @@ fmv/*.mp4
 netplay/node_modules/
 netplay/server.pid
 netplay/server.log
+games/br3/*.lock

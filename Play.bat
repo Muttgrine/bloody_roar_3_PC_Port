@@ -19,10 +19,10 @@ if not exist "games\br3\disc.iso" (
 :: Force NVIDIA GPU (instead of Intel integrated)
 set SHIM_MCCOMPAT=0x800000001
 set __NV_PRIME_RENDER_OFFLOAD=1
-set __GLX_VENDOR_LIBRARY_NAME=nvidia
 
-:: GPU settings — use Vulkan on NVIDIA (faster than D3D12 on discrete GPUs)
-set PS2_GPU_BACKEND=vulkan
+:: GPU settings — D3D12 uses DXGI which properly selects NVIDIA on Optimus laptops
+:: Vulkan doesn't respect Windows GPU preference on Optimus
+set PS2_GPU_BACKEND=dx12
 set PS2_GPU_SUBMIT_THREAD=1
 
 :: Visual enhancements
